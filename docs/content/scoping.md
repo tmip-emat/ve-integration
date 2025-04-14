@@ -12,16 +12,15 @@ TMIP-EMAT is a methodological approach for exploratory modeling and analysis des
     - **Vehicle and fuel characteristics**: Assumptions about the future vehicle fleet composition (e.g., percentage of light trucks, vehicle age, adoption rates of different powertrain technologies like EVs and PHEVs).
 
 - **Exogenous Uncertainties**: These represent future conditions or factors outside of direct policy control that could influence the outcomes. VisionEval is designed to explore a range of possible future conditions, so suitable parameters could include: 
-    - **Demographic projections: Population growth, household size, age distribution, per capita income.
+    - **Demographic projections**: Population growth, household size, age distribution, per capita income.
     - **Economic conditions**: Factors influencing economic growth, which might affect travel behavior and other inputs.
     - **Technology deployment**: Uncertainty in the rate and extent of adoption of new transportation technologies like autonomous vehicles or ride-hailing services.
     - **Fuel prices**: Variations in the cost of gasoline, diesel, and electricity.
 
 ### **Measures (Scoping VisionEval Outputs)**:
 
-These would correspond to the performance metrics that VisionEval calculates and reports. TMIP-EMAT can be used to explore the sensitivity of these measures to the variations in the input parameters. 
+These would correspond to the performance metrics that VisionEval calculates and reports. TMIP-EMAT can be used to explore the sensitivity of these measures to the variations in the input parameters. Examples from the VisionEval User Guide include:
 
-Examples from the VisionEval User Guide include:
 - **Mobility metrics**: 
     - Daily VMT per capita
     - annual walk/bike trips per capita
