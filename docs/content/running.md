@@ -675,8 +675,63 @@ Scenario-Inputs/
 
 ### Direct Injection
 
-Forthcoming: documentation of the direct injection method, which writes
-parameter values directly into the input files, overwriting existing values.
+The direct injection method is used to overwrite values directly in input files using parameter values. Unlike interpolation or scaling methods that manipulate entire tables or columns, direct injection targets specific cells—typically a single value in a known row and column. This approach is ideal when a policy lever or exogenous uncertainty corresponds to a single numeric input that varies across EMAT experiments.
+
+For instance, consider a scenario where you want to update the average occupancy in shared care services for a particular year. 
+
+The `_manipulate_shdcarsvc` function shown below is an example implementation
+
+```Python
+
+def _manipulate_shdcarsvc(
+    self, 
+    params # (1)!
+    ):
+
+		shdcarsvc_occp_df = pd.read_csv(join_norm(scenario_input(self.scenario_input_dirs.get('SHDCARSVCOCCUPRATE'),'region_carsvc_shd_occup.csv'))) # (2)!
+
+		future_year = self.model_future_year # (3)!
+
+		shdcarsvc_occp_df.loc[shdcarsvc_occp_df.Year == future_year, 'ShdCarSvcAveOccup'] = params['SHDCARSVCOCCUPRATE'] # (4)!
+		
+		out_filename = join_norm(
+			self.resolved_model_path, 'inputs', 'region_carsvc_shd_occup.csv'
+		)
+		_logger.debug(f"writing updates to: {out_filename}")
+		shdcarsvc_occp_df.to_csv(out_filename, index=False)
+```
+1. The `params` dictionary contains the value of the `SHDCARSVCOCCUPRATE` parameter, which may vary across experimental runs. 
+2. The input file `region_carsvc_shd_occup.csv` is read from the scenario folder.
+3. The method identifies the target year using `self.model_future_year`.
+4. The `ShdCarSvcAveOccup` column only for the year is set to the value of the `SHDCARSVCOCCUPRATE` parameter. 
+5. The modified file is saved to the model's resolved input directory for the use in the experiment run. 
+
+Here is an setup in the scope file
+```yaml
+inputs:
+    SHDCARSVCOCCUPRATE:
+        shortname: Shared Car Svc Occup
+        address: SHDCARSVCOCCUPRATE
+        ptype: exogenous uncertainty
+        dtype: float 
+        desc: Average occupancy in shared car services for future year.
+        default: 2.25
+        min: 1.0 # (1)!
+        max: 3 # (2)!
+```
+1. The default, min, and max values define the range of average occupancy that will be injected into the input file.
+
+Similar to template injection, direct injection uses a single version of the input file, typically stored in the scenario-specifc directory:
+
+```tree
+Scenario-Inputs/
+    OTP/
+        ANOTHER_PARAMETER/
+        SHDCARSVCOCCUPRATE/
+            region_carsvc_shd_occup.csv
+        OTHER_PARAMETER/
+```
+
 
 ### Custom Methods
 
