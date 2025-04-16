@@ -566,6 +566,7 @@ def _manipulate_by_delta(
 			)
 			df1.to_csv(out_filename, index=False, float_format="%.5f")
 ```
+
 1. The `params` dictionary is passed through from the `setup` method to the
 `_manipulate_by_delta` method.
 2. The `weight_param` is the name of the parameter that determines how much of the difference between the two datasets should be applied. A value of 0 results in no change from the first dataset, while 1 results in a full shift to the second.
@@ -590,6 +591,7 @@ inputs:
         min: 0.0 # (2)!
         max: 1.0 # (3)!
 ```
+
 1. The `dtype` is set to `float` to indicate that this is a continuous input,
     which can take on a range of values.
 2. The `min` value for delta factor should be 0.0. Positive values less
@@ -640,6 +642,7 @@ def _manipulate_income(
     income_df.to_csv(out_filename, index=False)
 
 ```
+
 1. The `params` dictionary contains the value of the INCOMEGROWTHRATE parameter, which may vary across experimental runs.
 2. The `azone_per_cap_inc.csv` input fule is treated as a template. The structure of the file is retained but the specific fields are updated using the growth rate. 
 3. For each unique year in the file, the function computes how far that year is from the base model year and applies compound growth accordingly.The columns `HHIncomePC.2005` and `GQIncomePC.2005` are multiplied by the growth factor. 
@@ -658,6 +661,7 @@ inputs:
         min: 0.95 # (2)!
         max: 1.05 # (3)!
 ```
+
 1. The `dtype` is set to `float` to indicate that this is a continuous input,
     which can take on a range of values.
 2. The `min` and `max` defines the range of annual growth factors. A default value of `1` indicates no change, while values below or aboce that reflect decreases or increases, respectively. 
@@ -700,6 +704,7 @@ def _manipulate_shdcarsvc(
 		_logger.debug(f"writing updates to: {out_filename}")
 		shdcarsvc_occp_df.to_csv(out_filename, index=False)
 ```
+
 1. The `params` dictionary contains the value of the `SHDCARSVCOCCUPRATE` parameter, which may vary across experimental runs. 
 2. The input file `region_carsvc_shd_occup.csv` is read from the scenario folder.
 3. The method identifies the target year using `self.model_future_year`.
@@ -717,8 +722,9 @@ inputs:
         desc: Average occupancy in shared car services for future year.
         default: 2.25
         min: 1.0 # (1)!
-        max: 3 # (2)!
+        max: 3 # (1)!
 ```
+
 1. The default, min, and max values define the range of average occupancy that will be injected into the input file.
 
 Similar to template injection, direct injection uses a single version of the input file, typically stored in the scenario-specifc directory:
