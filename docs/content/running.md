@@ -612,8 +612,66 @@ This structure ensures the function can locate both versions of the input file a
 
 ### Template Injection
 
-Forthcoming: documentation of the template injection method, which writes
-parameter values directly into the input files based on a template.
+The template injection method modifies the input file based on a predefined template using parameter values from the experimental setup to directly update specific fields. This is useful wehn values in a table are calculated rather than interpolated or scaled, such as applying a compound growth rate to income projections or updating a single parameter across multple years. 
+
+The `_manipualte_income` function shown below demonstrates how to apply this approach to per capita income data, adjusting values across simulation years using a user-defined growth rate. 
+
+
+```python
+def _manipulate_income(
+    self, 
+    params # (1)!
+    ):
+
+    income_df = pd.read_csv(join_norm(scenario_input(self.scenario_input_dirs.get('INCOMEGROWTHRATE'),'azone_per_cap_inc.csv'))) # (2)!
+
+    unique_years = income_df.Year.unique()
+    base_year = self.model_base_year
+
+    for run_year in unique_years:
+        year_diff = run_year - base_year
+        income_df.loc[income_df.Year == run_year,['HHIncomePC.2005', 'GQIncomePC.2005']] = \
+        income_df.loc[income_df.Year == run_year,['HHIncomePC.2005', 'GQIncomePC.2005']] * (params['INCOMEGROWTHRATE'] ** year_diff) # (3)!
+    
+    out_filename = join_norm(
+        self.resolved_model_path, 'inputs', 'azone_per_cap_inc.csv'
+    )
+    _logger.debug(f"writing updates to: {out_filename}")
+    income_df.to_csv(out_filename, index=False)
+
+```
+1. The `params` dictionary contains the value of the INCOMEGROWTHRATE parameter, which may vary across experimental runs.
+2. The `azone_per_cap_inc.csv` input fule is treated as a template. The structure of the file is retained but the specific fields are updated using the growth rate. 
+3. For each unique year in the file, the function computes how far that year is from the base model year and applies compound growth accordingly.The columns `HHIncomePC.2005` and `GQIncomePC.2005` are multiplied by the growth factor. 
+
+Here is an example setup in the scope file. 
+
+```yaml
+inputs:
+    INCOMEGROWTHRATE:
+        shortname: Income Growth Rate
+        address: INCOMEGROWTHRATE
+        ptype: exogenous uncertainty
+        dtype: float # (1)!
+        desc: Annual compound growth rate for per capita income
+        default: 1.0
+        min: 0.95 # (2)!
+        max: 1.05 # (3)!
+```
+1. The `dtype` is set to `float` to indicate that this is a continuous input,
+    which can take on a range of values.
+2. The `min` and `max` defines the range of annual growth factors. A default value of `1` indicates no change, while values below or aboce that reflect decreases or increases, respectively. 
+
+Unlike additive or scaling methods, template injection uses a single version of the input file, typically stored in the scenario-specifc directory:
+
+```tree
+Scenario-Inputs/
+    OTP/
+        ANOTHER_PARAMETER/
+        INCOMEGROWTHRATE/
+            azone_per_cap_inc.csv
+        OTHER_PARAMETER/
+```
 
 ### Direct Injection
 
