@@ -741,9 +741,18 @@ Scenario-Inputs/
 
 ### Custom Methods
 
-Forthcoming: documentation of how to define custom methods for preparing input files.
-
-
+The various methods for manipulating input files described above are likely 
+to be sufficient for most experiments. However, it is not strictly necessary
+to follow any of these recipes. Advanced users can harness the full power and
+flexibility of Python to manipulate or create new VisionEval input files in any 
+way they see fit, by writing bespoke methods to do so and calling those methods
+from the `setup` method of your subclass of `FilesCoreModel`. Virtually any 
+method or process that can be called from Python can be used to manipulate the 
+input files. This also includes potentially modifying or creating new input files 
+using R or any other programming language, by calling the necessary commands as 
+subprocesses from Python. The Python code necessary to call R (or any other tool) 
+as a subprocess is very similar to the code shown in the `run` method below, 
+and can be used to run R scripts or any other command line tool from within Python.
 
 ## Running an Experiment
 
