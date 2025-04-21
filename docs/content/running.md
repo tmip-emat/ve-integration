@@ -822,8 +822,6 @@ value of the `loc` argument. For the `iloc` argument, the performance measure is
 extracted by selecting the row & column with the integer positions that match the
 value of the `iloc` argument.
 
-Since most
-
 ```yaml
 outputs:
     HouseholdDvmtPerHh:
