@@ -1,0 +1,53 @@
+# Next Generation model with updated framework and export function
+# reproduces "base" VERSPM from VEModel, but provides alternate run script
+# to exercise the MultiModal features.
+VERSPM:
+  variants:
+    skats-reference:
+      description: VERSPM 3.1 with Work From Home Module, Driverless Module, and AP2022 Powertrain
+      config: visioneval-ref.cnf
+      scripts: scripts-ref
+      inputs: inputs-ref
+      defs: defs
+    skats-sc2:
+      description: VERSPM 3.1 with Work From Home Module, Driverless Module, and STS powertrain
+      config: visioneval-sc2.cnf
+      scripts: scripts-sc2
+      inputs: inputs-targetsts
+      defs: defs
+    skats-sample:
+      description: VERSPM 3.1 with Work From Home Module and AP2022 powertrain. Metro Oregon sample data inputs for framework testing
+      config: visioneval-sample.cnf
+      scripts: scripts-sample
+      inputs: inputs-sample
+      defs: defs-sample
+    skats-sc3:
+      description: VERSPM 3.1 Target Rule Scenario with Driverless, Work From Home Module, and STS Powertrain
+      config: visioneval-sc3.cnf
+      scripts: scripts-sc3
+      inputs: inputs-sc3
+      defs: defs
+    skats-sc4:
+      description: VERSPM 3.1 with Driverless, Work From Home Module, and STS Powertrain, Sensitivity Test 1
+      config: visioneval-sc4.cnf
+      scripts: scripts-sc4
+      inputs: inputs-sc4
+      defs: defs
+    skats-sc5:
+      description: VERSPM 3.1 with Driverless, Work From Home Module, and STS Powertrain, Sensitivity Test 2
+      config: visioneval-sc5.cnf
+      scripts: scripts-sc5
+      inputs: inputs-sc5
+      defs: defs
+    skats-sc6:
+      description: VERSPM 3.1 with Driverless, Work From Home Module, and STS Powertrain, Sensitivity Test 3
+      config: visioneval-sc6.cnf
+      scripts: scripts-sc6
+      inputs: inputs-sc6
+      defs: defs
+    skats-sc7:
+      description: VERSPM 3.1 with Driverless, Work From Home Module, and STS Powertrain, Sensitivity Test 4
+      config: visioneval-sc7.cnf
+      scripts: scripts-sc7
+      inputs: inputs-sc7
+      defs: defs

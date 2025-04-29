@@ -1,0 +1,6 @@
+"Geo","Year","VanPropIcev","VanPropHev","VanPropBev","RailPropIcev","RailPropHev","RailPropEv","BusPropIcev","BusPropHev","BusPropBev"
+"LCOG",2005,1,0,0,1,0,0,1,0,0
+"LCOG",2010,1,0,0,1,0,0,1,0,0
+"LCOG",2020,1,0,0,1,0,0,0.930817610062893,0,0.0691823899371069
+"LCOG",2035,1,0,0,1,0,0,0.104,0,0.896
+"LCOG",2045,1,0,0,1,0,0,0.104,0,0.896

@@ -1,0 +1,23 @@
+Notes:
+- VisionEval.cnf for MultiModal with telework VERSPM (single stage)
+- Model Structural Parameters: ScriptsDir, InputDir, ParamDir, GeoFile, ModelParamFile
+- Model Description: Model, Region, State
+- Scenario Description (single stage): Scenario, Description, BaseYear, Years
+
+# Model Structural Parameters
+ScriptsDir     : scripts
+InputDir       : inputs
+ParamDir       : defs
+GeoFile        : geo.csv
+ModelParamFile : model_parameters.json # Located in InputDir
+
+# Model description
+Model          : VERSPM 3.1 MultiModal, Telework, STS
+Region         : SKATS
+State          : OR
+
+# Scenario description (using default or runtime Seed parameter)
+Scenario       : VERSPM SKATS MultiModal, STS, telework, DL
+Description    : State STS - 2nd most aggressive - inputs. Using the STS variant of the inputs 
+BaseYear       : 2021
+Years          : [ 2005, 2021, 2050 ]

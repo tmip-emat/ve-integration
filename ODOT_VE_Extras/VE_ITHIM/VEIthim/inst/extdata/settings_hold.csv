@@ -1,0 +1,27 @@
+name,value,description
+gender_ratio,0.5,female:male ratio in the region's population
+e_rate_auto,2.5,PM exposure rate for auto drivers/passengers while driving/riding
+e_rate_transit,1.9,PM exposure rate for transit users while riding transit
+e_rate_walk,1.6,PM exposure rate for walkers while walking
+e_rate_bike,2,PM exposure rate for cyclists whiel cycling
+speed_auto,14.4,"avearge drive speed, mph"
+speed_transit,10,"avearge transit speed, mph"
+speed_walk,2.5,"avearge walk speed, mph"
+speed_bike,7.2,"avearge bike speed, mph"
+pm_inventory_auto,0.081980353,
+pm_inventory_transit,0.122466774,
+pm_inventory_walk,0,
+pm_inventory_bike,0,
+pm_trans_share,0.101,estimated proportion of regional PM from transportation sources
+moderate_pa_contribution,0.5,
+injury_reporting_rate,1,reporting rate for transportation fatalities (assume 1 in United States)
+sin_exp_auto,1.525,
+sin_exp_walk,1.575,
+sin_exp_bike,1.55,
+sin_exp_nov,0.9,
+cas_frac_auto,0.5,
+cas_frac_walk,0.4603175,
+cas_frac_bike,0.4516129,
+sleep_hours,8.3,
+leisure_hours,3.15,
+light_hours,10.75,

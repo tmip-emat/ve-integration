@@ -1,0 +1,10 @@
+﻿mode,met,compendium_ref
+auto,2.5,cpa16010
+transit,1.3,cpa16016
+walk,3.5,cpa16060
+bike,6.8,cpa01011
+sleep,0.95,cpa07030
+moderate,4,GPAQ
+vigorous,8,GPAQ
+leisure,1.3,cpa05080
+light_activities,1.3,cpa05080

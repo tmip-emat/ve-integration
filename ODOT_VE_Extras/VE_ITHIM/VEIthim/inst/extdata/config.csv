@@ -1,0 +1,7 @@
+name,value,description
+model_name,VERSPM-skatsref_sc1.1,name of the VE model 
+base_model,stage-base,name of the VE base scenario
+base_year,2021,year of the VE base scenario
+reference_model,stage-base,name of the VE reference scenario
+crash_method,ve,must be one one of “ve” or “fars”; defines which input data file to use when modeling the traffic safety pathway
+type,single,"single or multiscenario. Write either ""single"" or ""multi"""

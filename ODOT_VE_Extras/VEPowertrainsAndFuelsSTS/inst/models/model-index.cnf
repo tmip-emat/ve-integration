@@ -1,0 +1,11 @@
+# Next Generation test model for metro scenario with STS PowertrainandFuels
+# reproduces "base" VERSPM from VEModel, but provides alternate run script
+# to exercise the MultiModal features.
+VERSPM:
+  variants:
+    metrosts:
+      description: VERSPM 3.0 with VE Scenario with STS PowertrainandFuels
+      config: visioneval-metrosts.cnf
+      scripts: scripts
+      inputs: inputs
+      defs: defs

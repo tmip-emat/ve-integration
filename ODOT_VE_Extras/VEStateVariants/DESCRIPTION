@@ -1,0 +1,19 @@
+Package: VEStateVariants
+Type: Package
+Title: Model variants for the Oregon VE State
+Version: 1.0
+Date: 2023-10-24
+Authors@R: c(person("Jonathan", "Slason", role=c("aut", "cre"), email="jonathan.slason@rsginc.com"), person("Colin", "Smith", role=c("ctb"), email="colin.smith@rsginc.com"))
+Maintainer: RSG  <jonathan.slason@rsginc.com>
+Copyright: ODOT
+URL: http://www.rsginc.com
+Description: This package contains the Oregon DOT for the VE State model
+License: file LICENSE
+LazyData: TRUE
+Encoding: UTF-8
+Depends: R (>= 3.6.0)
+VignetteBuilder: knitr
+Roxygen: list(load="source")
+RoxygenNote: 7.2.3
+Remotes:
+

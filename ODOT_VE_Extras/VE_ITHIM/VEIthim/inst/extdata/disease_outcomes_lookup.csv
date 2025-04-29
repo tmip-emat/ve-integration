@@ -1,0 +1,5 @@
+GBD_name,acronym,air_pollution,physical_activity,ap_acronym,pa_acronym,outcome
+All causes,all_cause,1,1,all_cause_ap,all-cause-mortality,deaths
+Chronic obstructive pulmonary disease,copd,1,0,resp_copd,,
+Diabetes mellitus type 2,diabetes,1,1,t2_dm,diabetes,cases
+Colon cancer,colon_cancer,0,1,,colon-cancer,cases

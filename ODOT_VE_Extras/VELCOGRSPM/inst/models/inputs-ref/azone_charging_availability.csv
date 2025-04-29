@@ -1,0 +1,16 @@
+"Geo","Year","PropSFChargingAvail","PropMFChargingAvail","PropGQChargingAvail"
+"Eugene",2005,0.65,0,0
+"Springfield",2005,0.65,0,0
+"Coburg",2005,0.65,0,0
+"Eugene",2010,0.75,0,0
+"Springfield",2010,0.75,0,0
+"Coburg",2010,0.75,0,0
+"Eugene",2020,0.88,0.016,0.038
+"Springfield",2020,0.88,0.016,0.038
+"Coburg",2020,0.88,0.016,0.038
+"Eugene",2035,0.95,0.058,0.144
+"Springfield",2035,0.95,0.058,0.144
+"Coburg",2035,0.95,0.058,0.144
+"Eugene",2045,0.95,0.086,0.215
+"Springfield",2045,0.95,0.086,0.215
+"Coburg",2045,0.95,0.086,0.215

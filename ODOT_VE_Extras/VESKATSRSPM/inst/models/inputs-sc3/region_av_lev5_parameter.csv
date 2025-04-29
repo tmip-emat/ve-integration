@@ -1,0 +1,5 @@
+Year,RunTimeUtilityAdj,AccessTimeUtilityAdj,PropRemoteAccess,RemoteAccessDvmtAdj,PropParkingFeeAvoid
+2005,1,1,0,1,0
+2010,1,1,0,1,0
+2021,1,1,0,1,0
+2050,0.85,0.85,0.18,1.36,0.18

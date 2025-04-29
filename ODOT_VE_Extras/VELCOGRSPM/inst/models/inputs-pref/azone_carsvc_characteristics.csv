@@ -1,0 +1,16 @@
+"Geo","Year","HighCarSvcCost.2018","LowCarSvcCost.2018","AveCarSvcVehicleAge","AutoCarSvcSubProp","LtTrkCarSvcSubProp","ShdCarSvcCost.2020","UnShdCarSvcCost.2020","HighCarSvcDeadheadProp","LowCarSvcDeadheadProp","ShdCarSvcDeadheadFactor","UnShdCarSvcDeadheadFactor"
+"Coburg",2005,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Eugene",2005,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Springfield",2005,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Coburg",2010,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Eugene",2010,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Springfield",2010,2,4,7,0.95,0.75,2,2.25,0,0,1,1
+"Coburg",2020,2,4,5,0.95,0.75,2,2.25,0,0,1,1
+"Eugene",2020,2,4,5,0.95,0.75,2,2.25,0,0,1,1
+"Springfield",2020,2,4,5,0.95,0.75,2,2.25,0,0,1,1
+"Coburg",2035,2,4,5,0.95,0.8,2,2.25,0,0,1,1
+"Eugene",2035,2,4,5,0.95,0.8,2,2.25,0,0,1,1
+"Springfield",2035,2,4,5,0.95,0.8,2,2.25,0,0,1,1
+"Coburg",2045,2,4,3,0.95,0.85,2,2.25,0,0,1,1
+"Eugene",2045,2,4,3,0.95,0.85,2,2.25,0,0,1,1
+"Springfield",2045,2,4,3,0.95,0.85,2,2.25,0,0,1,1

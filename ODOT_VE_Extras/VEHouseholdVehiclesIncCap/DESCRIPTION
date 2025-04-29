@@ -1,0 +1,29 @@
+Package: VEHouseholdVehiclesIncCap
+Type: Package
+Title: Model household vehicles with driver and vehicle adjustments. Income caps applied on vehicle ownership model, so that decline in vehicles doesn't happen at highest income.
+Version: 2.1.0
+Date: 2023-11-03
+Author: Brian Gregor [aut, cre], Aditya Gore <aditya.gore@rsginc.com> [cre]
+Maintainer: Brian Gregor <gregorb@or-analytics.com>, Aditya Gore <aditya.gore@rsginc.com>
+Copyright: AASHTO
+Description: This package contains modules which predict number of drivers in a households.
+ The module is different than the one in VEHouseholdVehicles package as the income data
+ is capped before feeding into driver model.
+License: file LICENSE
+LazyData: TRUE
+LazyDataCompression: bzip2
+Depends: R (>= 3.6.0)
+Imports:
+    visioneval,
+    ordinal,
+    reshape2
+Suggests:
+    knitr,
+    VE2001NHTS
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(load='source')
+RoxygenNote: 7.2.3
+Collate: 
+    'AssignDrivers.R'
+    'Finalize.R'

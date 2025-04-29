@@ -1,0 +1,37 @@
+# Next Generation test model for MultiModal module
+# reproduces "base" VERSPM from VEModel, but provides alternate run script
+# to exercise the MultiModal features.
+VERSPM:
+  variants:
+    mm:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module
+      config: visioneval-mm.cnf
+      scripts: scripts
+      inputs: inputs
+      defs: defs
+    metro-mm:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module
+      config: visioneval-metro-mm.cnf
+      scripts: scripts
+      inputs: inputs-metro-mm
+      defs: defs-metro
+    metro-mm-sts:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module
+      config: visioneval-metro-mm-sts.cnf
+      scripts: scripts-metro-mm-sts
+      inputs: inputs-metro-mm
+      defs: defs-metro
+VE-State:
+  variants:
+    odot-mm:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module
+      config: visioneval-odot-mm.cnf
+      scripts: scripts-odot-mm
+      inputs: inputs-odot-mm
+      defs: defs-odot
+    odot-otp:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module
+      config: visioneval-odot-otp.cnf
+      scripts: scripts-odot-otp
+      inputs: inputs-odot-otp
+      defs: defs-odot

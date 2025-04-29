@@ -1,0 +1,6 @@
+"Year","CarSvcAutoPropIcev","CarSvcAutoPropHev","CarSvcAutoPropBev","CarSvcLtTrkPropIcev","CarSvcLtTrkPropHev","CarSvcLtTrkPropBev"
+2005,1,0,0,1,0,0
+2010,0.975,0.025,0,0.995,0.005,0
+2020,0.809,0.165,0.026,0.951,0.044,0.005
+2035,0.391,0.297,0.312,0.688,0.192,0.12
+2045,0.395,0.342,0.263,0.578,0.239,0.183

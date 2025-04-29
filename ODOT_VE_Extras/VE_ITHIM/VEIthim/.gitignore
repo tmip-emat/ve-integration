@@ -1,0 +1,8 @@
+.Rhistory
+.Renviron
+plan.txt
+/data/
+inst/models/inputs/VEPopulationSimInputs/PopulationSim_Model/output
+/models/
+launch.bat
+.Rprofile

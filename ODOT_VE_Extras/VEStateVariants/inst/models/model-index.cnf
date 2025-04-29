@@ -1,0 +1,43 @@
+# Next Generation model with updated framework and export function
+
+# reproduces "base" VERSPM from VEModel, but provides alternate run script
+# to exercise the MultiModal features.
+VE-State:
+  variants:
+    odot-wfh-sld-dl:
+      description: VERSPM 3.0 with MultiModal Travel Demand Module with SLD capping and Autonomous Vehicles. Inputs are the AP22. This is the latest and greatest VE State for the OTP. Unsed in the Round 2 uncertainty analysis.
+      config: visioneval-odot-wfh-sld-dl.cnf
+      scripts: scripts-wfh-sld-dl
+      inputs: inputs-wfh-sld-dl
+      defs: defs
+    odotmm-AP22:
+      description: VESTATE 3.1 with 2017 MultiModal module and AP22 powertrain
+      config: visioneval-odot-AP22.cnf
+      scripts: scripts-AP22-mm
+      inputs: inputs-AP22
+      defs: defs
+    odotmm-AP22-wfh:
+      description: VESTATE 3.1 with WFH (2017 MM + WFH) and AP22 powertrain
+      config: visioneval-odot-AP22-wfh.cnf
+      scripts: scripts-AP22-wfh
+      inputs: inputs-AP22
+      defs: defs
+    odotWFH-STS:
+      description: VESTATE 3.1 with WFH (2017 MultiModal + WFH ) and STS powertrain
+      config: visioneval-odotwfh-STS.cnf
+      scripts: scripts-wfh-sts
+      inputs: inputs-wfh-STS
+      defs: defs
+    odot-STS:
+      description: DO NOT USE - VESTATE 3.1 with and STS powertrain. 
+      config: visioneval-odot-STS.cnf
+      scripts: scripts-orig-STS
+      inputs: inputs-STS
+      defs: defs
+    odotmm-dl:
+      description: VESTATE 3.1 with 2017 MM and Driverless and AP22 powertrain
+      config: visioneval-odotmm-dl.cnf
+      scripts: scripts-mm-dl
+      inputs: inputs-mm-dl
+      defs: defs
+
