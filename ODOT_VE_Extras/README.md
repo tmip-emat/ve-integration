@@ -24,9 +24,9 @@ Build a runtime VisionEval
 
 Install ODOT Extra packages:
 
-1. Clone [https://github.com/ORScenPlg/ODOT_VE_Extras](https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FORScenPlg%2FODOT_VE_Extras&data=05|01||38662f3aab6a4170ec8208db9e5cc866|93676b1f90394fea97dbdde5da5b29fa|0|0|638277893578191818|Unknown|TWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D|3000|||&sdata=olHbuKXRQQH%2BkZ3TQ5dM8vpii35ruSywHYr560x26mI%3D&reserved=0) repository on a server or local machine. I’ll assume the location of the clone is C:\ODOT_VE_Extras
+1. Clone [https://github.com/tmip-emat/ve-integration/tree/docs](https://github.com/tmip-emat/ve-integration/tree/docs) repository on a server or local machine. I’ll assume the location of the clone is C:\ve-integration
 
-2. Navigate to C:\ODOT_VE_Extras, double click setup.bat, and follow the prompts. 
+2. Navigate to C:\ve-integration\ODOT_VE_Extras, double click setup.bat, and follow the prompts. 
 
    Prompts:
 
@@ -133,68 +133,6 @@ Install the VEStateVariants package. Within that package there are the following
 - STS powertrain
 - STS inputs
 
-
-
-
-
-
-
-## Salem-Keizer RSPM Model Variants
-
-The user will have to install the VESKATSRSPM package by using the code “*install.packages(“VESKATSRSPM”, type=”source”, repos=NULL)*”
-
-https://github.com/ORScenPlg/ODOT_VE_Extras/tree/main/VESKATSRSPM 
-
-The model variants are found here: SKATS_RSPM/inst/models/model_index.cnf
-
-*skats-reference* (scenario 1) = Reference Model (WFH, Multimodal, AP2022 Powertrains) for 2005, 2010, and future reference case
-
-skats-targetsts (scenario 3) = Target Rule Model (WFH, Multimodal, STS powertrain) for 2020, and future with STS inputs for State Authority inputs and STS level inputs for the Local Authority. 
-
-
-
-
-
-
-
-## Portland Metro RSPM Model variants
-
-The Portland Metro model VERSPM variants are located on the Metro VE Extras Repo: https://github.com/RSGInc/Metro-VE-Extras 
-
-Specifically the 
-
-*metro-wfh* = Metro-WFH (multimodal, AP2022, Teleworking)
-
-*metro-wfh-sts* = Metro-WFH-STS (multimodal, STS powertrain, and Teleworking, and STS inputs)
-
-https://github.com/RSGInc/Metro-VE-Extras/tree/main/VERSPMMetroModels/inst/models
-
-VERSPM:
-  variants:
-    metro-reference:
-      description: VERSPM 3.1 with Work From Home Module and AP2022 Powertrain
-      config: visioneval-ref.cnf
-      scripts: scripts-ref
-      inputs: inputs-ref
-      defs: defs
-    metro-targetsts:
-      description: VERSPM 3.1 with Work From Home Module and STS powertrain and STS inputs
-      config: visioneval-targetsts.cnf
-      scripts: scripts-targetsts
-      inputs: inputs-targetsts
-      defs: defs
-    metro-targetsts-newvehinputs:
-      description: VERSPM 3.1 with Work From Home Module and STS powertrain. Older and Heavier vehicle fleet.
-      config: visioneval-targetsts-newvehinputs.cnf
-      scripts: scripts-targetsts-newvehinputs
-      inputs: inputs-targetsts-newvehinputs
-      defs: defs
-    metro-rtp-round2:
-      description: VERSPM 3.1 with Work From Home Module and STS powertrain. RTP Round 2 updates.
-      config: visioneval-rtp-round2.cnf
-      scripts: scripts-rtp-round2
-      inputs: inputs-rtp-round2
-      defs: defs
 
 
 
