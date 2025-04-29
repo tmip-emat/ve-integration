@@ -25,7 +25,11 @@ This documentation is a companion to two example repositories:
 - [tmip-emat/tmip-emat-ve](https://github.com/tmip-emat/tmip-emat-ve) - An initial
     technological demonstration of the integration of EMAT and VisionEval.
 - [tmip-emat/ve-integration](https://github.com/tmip-emat/ve-integration) -
-    An example of using the integration as implemented for Oregon DOT.
+    An example of using the integration as implemented for Oregon DOT. Users
+    interested in working with Oregon DOT models should refer to the
+    [README](https://github.com/tmip-emat/ve-integration/blob/docs/ReadMe.md)
+    for detailed instructions on how to install and use the various components
+    of this integration.
 
 ## Contents
 
